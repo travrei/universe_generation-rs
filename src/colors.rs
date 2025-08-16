@@ -1,0 +1,27 @@
+use raylib::prelude::*;
+
+pub const CRUST: Color = Color::new(22, 22, 29, 255);
+pub const BASE: Color = Color::new(30, 31, 40, 255);
+pub const MIDBLUE: Color = Color::new(43, 42, 56, 255);
+pub const MIDBLUE2: Color = Color::new(53, 54, 71, 255);
+pub const MIDBLUE3: Color = Color::new(84, 84, 109, 255);
+pub const CORNSILK: Color = Color::new(221, 215, 186, 255);
+pub const SLAYTEGRASS: Color = Color::new(114, 113, 104, 255);
+pub const NAVY: Color = Color::new(35, 50, 73, 255);
+pub const TEAL: Color = Color::new(44, 79, 103, 255);
+pub const PURPGREY: Color = Color::new(148, 138, 169, 255);
+pub const PURP: Color = Color::new(149, 127, 184, 255);
+pub const LIGHTBLUE: Color = Color::new(126, 156, 215, 255);
+pub const TEAL_2: Color = Color::new(122, 168, 160, 255);
+pub const ROSYPINK: Color = Color::new(210, 126, 153, 255);
+pub const RED: Color = Color::new(232, 35, 35, 255);
+pub const SKYBLUE: Color = Color::new(127, 180, 203, 255);
+pub const GREENYELL: Color = Color::new(151, 187, 108, 255);
+pub const VIOLETRED: Color = Color::new(227, 104, 118, 255);
+pub const ORANGE: Color = Color::new(255, 160, 102, 255);
+pub const CADETGREEN: Color = Color::new(107, 149, 137, 255);
+pub const BURLYWOOD: Color = Color::new(230, 195, 132, 255);
+pub const TAN: Color = Color::new(192, 163, 110, 255);
+pub const SALMON: Color = Color::new(255, 93, 98, 255);
+pub const LIGHTSTEEL: Color = Color::new(156, 170, 201, 255);
+pub const SLATEBLUE: Color = Color::new(101, 132, 147, 255);

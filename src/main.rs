@@ -1,41 +1,24 @@
-use raylib::prelude::*;
+use macroquad::prelude::*;
 
-use crate::{colors::CRUST, eui::Eui};
+use crate::config::{CRUST, window_config};
 
-mod colors;
-mod eui;
-mod fast_rand;
-mod model;
+mod config;
 
-const SCREEN_WIDTH: i32 = 900;
-const SCREEN_HEIGHT: i32 = 800;
-const TITLE_WINDOW: &str = "Universe_Demo-rs";
-
-fn main() {
-    //----SETUP----
+#[macroquad::main(window_config())]
+async fn main() {
+    //--Setup--
     let mut should_run: bool = true;
 
-    let (mut rl, thread) = raylib::init()
-        .size(SCREEN_WIDTH, SCREEN_HEIGHT)
-        .title(TITLE_WINDOW)
-        .resizable()
-        .build();
-
-    rl.set_target_fps(75);
-
-    let mut ui = Eui::new();
-
-    //----LOOP-----
-    while should_run && !rl.window_should_close() {
-        if rl.is_key_pressed(KeyboardKey::KEY_TAB) {
+    //--Main Loop--
+    while should_run {
+        if is_key_pressed(KeyCode::Tab){
             should_run = false;
         }
+        
+        clear_background(CRUST);
 
-        ui.update(&rl);
-        let mut d = rl.begin_drawing(&thread);
-        d.clear_background(CRUST);
+        draw_text("Initial Development!", 20., 20., 20., WHITE);
 
-        ui.draw(&mut d);
-        ui.show_ui(&mut d);
+        next_frame().await
     }
 }
